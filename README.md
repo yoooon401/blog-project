@@ -1,12 +1,12 @@
-# Base Project
-Spring Boot Java Project (Boiler Plate)
+# Blog Project
+Spring Boot Java Project 블로그 검색 서비스
 
 ## 개발환경
-| Name | Version | Description |
-| --- | --- | --- |
-| Java | `1.8` |
-| Gradle | `6.9.4` |
-| Spring Boot | `2.7.15.RELEASE` |
+| Name | Version    | Description |
+| --- |------------| --- |
+| Java | `17`       |
+| Gradle | `7.2`      |
+| Spring Boot | `2.7.15` |
 | Lombok | 
 | H2Database |
 
@@ -15,6 +15,16 @@ http://localhost:8080/h2-console
 - url : jdbc:h2:~/test
 - name : sa
 
-## index 웹 페이지
-http://localhost:8080/index.html
+## 사용 라이브러리
+| Name | Description |
+| --- |-------------|
+| openfeign | 외부 api 연동   |
+| jackson | json 관련 처리  |
+
+## API
+| Method      | url | Description      |
+|-------------|----|------------------|
+| GET         | /search/blog  | 블로그 검색           |
+| GET         | /keyword/popular  | 인기 검색어 Top 10 조회 |
+| GET         | /keyword/recent  | 최근 검색어 Top 10 조회 |
 
