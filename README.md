@@ -28,3 +28,11 @@ http://localhost:8080/h2-console
 | GET         | /keyword/popular  | 인기 검색어 Top 10 조회 |
 | GET         | /keyword/recent  | 최근 검색어 Top 10 조회 |
 
+## Executable jar
+https://github.com/yoooon401/blog-project/tree/master/jar
+- java -jar blog-project-0.0.1-SNAPSHOT.jar
+
+
+## Postman
+https://github.com/yoooon401/blog-project/tree/master/postman
+- Blog Project.postman_collection.json

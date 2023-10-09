@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "b521da6f-452a-4995-bb99-e0adb4f361d5",
+		"name": "Blog Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5462900"
+	},
+	"item": [
+		{
+			"name": "최근검색어 조회",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/keyword/recent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"keyword",
+						"recent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "인기검색어 조회",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/keyword/popular",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"keyword",
+						"popular"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "블로그 검색",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/search/blog?keyword=집&url=www.naver.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"search",
+						"blog"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "집",
+							"description": "검색어, 필수값"
+						},
+						{
+							"key": "url",
+							"value": "www.naver.com",
+							"description": "검색할 블로그 url, 선택값"
+						},
+						{
+							"key": "sort",
+							"value": null,
+							"description": "정렬기준, 선택값 (ACCURACY(default) / RECENCY)",
+							"disabled": true
+						},
+						{
+							"key": "source",
+							"value": null,
+							"description": "검색 소스, 선택값 (KAKAO(default) / NAVER)",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": null,
+							"description": "검색페이지, 선택값 (default : 1)",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": null,
+							"description": "페이지사이즈, 선택값 (default : 10)",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
