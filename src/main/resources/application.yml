@@ -1,0 +1,50 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+spring:
+  profiles:
+    active: local
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: sa
+    url: jdbc:h2:~/test;
+    password:
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    generate-ddl: false
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  servlet:
+    multipart:
+      enabled: true
+      max-request-size: 100MB
+      max-file-size: 100MB
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+service:
+  kakao:
+    auth: 0de1f2d6b9be8a5998fca860d8760e89
+    url: https://dapi.kakao.com/v2
+  naver:
+    auth:
+      client-id: alW6uYouMzkr8_F__b1e
+      client-secret: frGTlmIMog
+    url: https://openapi.naver.com/v1
+
+
+
